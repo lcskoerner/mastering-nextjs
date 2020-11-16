@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Header from '../components/header'
 
 const List = ({ items, ...props }) => {
   const [filteredItems, setFilteredItems] = useState(items)
@@ -25,10 +26,13 @@ const ListContainer = () => {
   const items = ['Learn React', 'Learn Next.js', '???', 'Profit!']
 
   return (
-    <List
-      aria-label='My Fancy List'
-      items={items}
-    />
+    <>
+      <Header />
+      <List
+        aria-label='My Fancy List'
+        items={items}
+      />
+    </>
   )
 }
 
